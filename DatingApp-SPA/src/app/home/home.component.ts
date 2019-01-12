@@ -8,17 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   registerMode = false;
-  values: any;
-  constructor(private httpClient: HttpClient) {}
+  constructor() {}
 
   ngOnInit() {
-    this.getValues();
-  }
-
-  getValues() {
-    return this.httpClient
-      .get('http://localhost:5000/api/values')
-      .subscribe(resp => (this.values = resp));
   }
 
   registerToggle() {
