@@ -22,7 +22,10 @@ export class HomeComponent implements OnInit {
   }
 
   registerToggle() {
-    this.registerMode = !this.registerMode;
+    this.registerMode = true;
   }
 
+  cancelRegister($event) {
+    this.registerMode = $event;
+  }
 }
